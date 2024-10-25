@@ -215,10 +215,15 @@ export const originSources = {
     },
   },
   "bilibili": {
-    name: "Bilibili",
-    type: "hottest",
-    color: "gray",
+    name: "哔哩哔哩",
+    color: "blue",
     home: "https://www.bilibili.com",
+    sub: {
+      "hot-search": {
+        title: "热搜",
+        type: "hottest",
+      },
+    },
   },
 } as const satisfies Record<string, OriginSource>
 
