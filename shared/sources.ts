@@ -214,6 +214,12 @@ export const originSources = {
       },
     },
   },
+  "bilibili": {
+    name: "Bilibili",
+    type: "hottest",
+    color: "gray",
+    home: "https://www.bilibili.com",
+  },
 } as const satisfies Record<string, OriginSource>
 
 export const sources = genSources()
