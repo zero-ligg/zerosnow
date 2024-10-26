@@ -53,7 +53,6 @@ export default defineSource(async () => {
       id: hotSearchWord,
       title: hotItem.name,
       url: `https://www.kuaishou.com/search/video?searchKey=${encodeURIComponent(hotItem.name)}`,
-      hot: hotItem.hotValue,
       extra: hotItem.iconUrl
         ? {
             icon: `/api/proxy?img=${encodeURIComponent(hotItem.iconUrl)}`,
