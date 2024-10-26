@@ -250,7 +250,7 @@ export const originSources = {
     name: "快手",
     type: "hottest",
     column: "china",
-    color: "gray",
+    color: "orange",
     home: "https://www.kuaishou.com",
   },
   "kaopu": {
