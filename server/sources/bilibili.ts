@@ -1,3 +1,5 @@
+import { randomItem } from "@shared/utils"
+
 interface Res {
   code: number
   message: string
@@ -20,11 +22,11 @@ interface Res {
 
 const hotSearch = defineSource(async () => {
   const url = "https://api.bilibili.com/x/web-interface/wbi/search/square?limit=30"
-  const cookie = (await $fetch.raw("https://www.bilibili.tv/en")).headers.getSetCookie()
+  const cookie = (await $fetch.raw(`https://${randomItem(["api", "t", "www", "search"])}.bilibili.com`)).headers.getSetCookie()
   const res: Res = await $fetch(url, {
     headers: {
       "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
-      "cookie": cookie.join(";").replace(/.tv/g, ".com"),
+      "cookie": cookie.join(";"),
       "referer": "https://www.bilibili.com/",
     },
   })
