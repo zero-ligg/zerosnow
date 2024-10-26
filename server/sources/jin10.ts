@@ -23,26 +23,24 @@ export default defineSource(async () => {
   const timestamp = Date.now()
   const url = `https://www.jin10.com/flash_newest.js?t=${timestamp}`
 
-  const rawData = await $fetch(url, {
-    headers: {
-      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
-    },
+  const rawData: string = await $fetch(url)
+
+  // eslint-disable-next-line no-new-func
+  const jsonStr = new Function(`${rawData}\nreturn newest;`)
+  const data: Jin10Item[] = jsonStr()
+
+  return data.filter(k => (k.data.title || k.data.content) && !k.channel?.includes(5)).map((k) => {
+    const text = (k.data.title || k.data.content)!.replace(/<\/?b>/g, "")
+    const [,title, desc] = text.match(/^【([^】]*)】(.*)$/) ?? []
+    return {
+      id: k.id,
+      title: title ?? text,
+      pubDate: parseRelativeDate(k.time, "Asia/Shanghai").valueOf(),
+      url: `https://flash.jin10.com/detail/${k.id}`,
+      extra: {
+        hover: desc,
+        info: !!k.important && "✰",
+      },
+    }
   })
-
-  // 更严谨地处理字符串，确保移除所有非 JSON 内容
-  const jsonStr = (rawData as string)
-    .replace(/^var\s+newest\s*=\s*/, "") // 移除开头的变量声明
-    .replace(/;*$/, "") // 移除末尾可能存在的分号
-    .trim() // 移除首尾空白字符
-  const data: Jin10Item[] = JSON.parse(jsonStr)
-
-  return data.map(item => ({
-    id: item.id,
-    title: item.data.content || item.data.vip_title || "", // 使用 content 作为标题，因为示例中 title 都是空的
-    url: `https://flash.jin10.com/detail/${item.id}`,
-    extra: {
-      date: item.time,
-      important: item.important,
-    },
-  }))
 })
