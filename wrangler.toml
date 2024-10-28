@@ -2,6 +2,12 @@ name = "newsnow"
 pages_build_output_dir = "dist/output/public"
 compatibility_date = "2024-10-28"
 
+[vars]
+G_CLIENT_ID = "Ov23li0zuGnwkbtiPAc7"
+G_CLIENT_SECRET = "1dd32e73a721bde1ab6a68886468f9a5cd7fe888"
+JWT_SECRET = "1dd32e73a721bde1ab6a68886468f9a5cd7fe888"
+INIT_TABLE = true
+
 [[d1_databases]]
 binding = "NEWSNOW_DB"
 database_name = "newsnow"
