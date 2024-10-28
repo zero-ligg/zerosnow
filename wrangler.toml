@@ -3,10 +3,9 @@ pages_build_output_dir = "dist/output/public"
 compatibility_date = "2024-10-28"
 
 [vars]
-G_CLIENT_ID = "Iv23li6mmcOFLbhR4Koz"
-G_CLIENT_SECRET = "a9dfaf16613131bb52a083ff46458f88cfab72d0"
-JWT_SECRET = "a9dfaf16613131bb52a083ff46458f88cfab72d0"
-INIT_TABLE = true
+G_CLIENT_ID = "Ov23liUfqJYEHSLOcmTO"
+G_CLIENT_SECRET = "38271f5b10ec2f1c3d2734a5ba564094a9d1d324"
+JWT_SECRET = "38271f5b10ec2f1c3d2734a5ba564094a9d1d324"
 
 [[d1_databases]]
 binding = "NEWSNOW_DB"
