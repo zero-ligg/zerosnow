@@ -23,6 +23,39 @@ export const originSources = {
       },
     },
   },
+  "huxiu": {
+    name: "虎嗅网",
+    // type: "realtime",
+    type: "hottest",
+    color: "blue",
+    // cloudflare pages cannot access
+    // disable: true,
+    home: "https://huxiu.com",
+    sub: {
+      quick: {
+        title: "快讯",
+      },
+    },
+  },
+  "36kr": {
+    name: "36氪",
+    // type: "realtime",
+    type: "hottest",
+    color: "blue",
+    // cloudflare pages cannot access
+    // disable: true,
+    home: "https://36kr.com",
+    sub: {
+      quick: {
+        title: "快讯",
+        type: "hottest",
+      },
+      information: {
+        title: "资讯",
+        type: "realtime",
+      },
+    },
+  },
   "zhihu": {
     name: "知乎",
     type: "hottest",
@@ -77,19 +110,7 @@ export const originSources = {
       },
     },
   },
-  "36kr": {
-    name: "36氪",
-    type: "realtime",
-    color: "blue",
-    // cloudflare pages cannot access
-    disable: true,
-    home: "https://36kr.com",
-    sub: {
-      quick: {
-        title: "快讯",
-      },
-    },
-  },
+
   "douyin": {
     name: "抖音",
     type: "hottest",

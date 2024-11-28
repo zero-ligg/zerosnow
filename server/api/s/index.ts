@@ -1,6 +1,6 @@
 import type { SourceID, SourceResponse } from "@shared/types"
-import { getters } from "#/getters"
 import { getCacheTable } from "#/database/cache"
+import { getters } from "#/getters"
 import type { CacheInfo } from "#/types"
 
 export default defineEventHandler(async (event): Promise<SourceResponse> => {
@@ -13,7 +13,7 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
     if (isValid(id)) {
       const redirectID = sources?.[id]?.redirect
       if (redirectID) id = redirectID
-      if (isValid(id)) throw new Error("Invalid source id")
+      if (isValid(id)) throw new Error(`Invalid source ${id}`)
     }
 
     const cacheTable = await getCacheTable()
