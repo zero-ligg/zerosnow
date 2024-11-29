@@ -239,6 +239,7 @@ export const originSources = {
     color: "orange",
     column: "tech",
     type: "hottest",
+    disable: true,
     home: "https://news.ycombinator.com/",
   },
   "producthunt": {
@@ -246,6 +247,7 @@ export const originSources = {
     color: "red",
     column: "tech",
     type: "hottest",
+    disable: true,
     home: "https://www.producthunt.com/",
   },
   "github": {
