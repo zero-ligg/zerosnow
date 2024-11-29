@@ -34,6 +34,7 @@ export const originSources = {
     sub: {
       quick: {
         title: "快讯",
+        column: "finance",
       },
     },
   },
@@ -49,10 +50,13 @@ export const originSources = {
       quick: {
         title: "快讯",
         type: "hottest",
+        column: "finance",
+
       },
       information: {
         title: "资讯",
         type: "realtime",
+        column: "finance",
       },
     },
   },
