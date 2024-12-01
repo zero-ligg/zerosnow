@@ -23,6 +23,43 @@ export const originSources = {
       },
     },
   },
+  "huxiu": {
+    name: "虎嗅网",
+    // type: "realtime",
+    type: "hottest",
+    color: "blue",
+    // cloudflare pages cannot access
+    // disable: true,
+    home: "https://huxiu.com",
+    sub: {
+      quick: {
+        title: "快讯",
+        column: "finance",
+      },
+    },
+  },
+  "36kr": {
+    name: "36氪",
+    // type: "realtime",
+    type: "hottest",
+    color: "blue",
+    // cloudflare pages cannot access
+    // disable: true,
+    home: "https://36kr.com",
+    sub: {
+      quick: {
+        title: "快讯",
+        type: "hottest",
+        column: "finance",
+
+      },
+      information: {
+        title: "资讯",
+        type: "realtime",
+        column: "finance",
+      },
+    },
+  },
   "zhihu": {
     name: "知乎",
     type: "hottest",
@@ -77,19 +114,7 @@ export const originSources = {
       },
     },
   },
-  "36kr": {
-    name: "36氪",
-    type: "realtime",
-    color: "blue",
-    // cloudflare pages cannot access
-    disable: true,
-    home: "https://36kr.com",
-    sub: {
-      quick: {
-        title: "快讯",
-      },
-    },
-  },
+
   "douyin": {
     name: "抖音",
     type: "hottest",
@@ -218,6 +243,7 @@ export const originSources = {
     color: "orange",
     column: "tech",
     type: "hottest",
+    disable: true,
     home: "https://news.ycombinator.com/",
   },
   "producthunt": {
@@ -225,6 +251,7 @@ export const originSources = {
     color: "red",
     column: "tech",
     type: "hottest",
+    disable: true,
     home: "https://www.producthunt.com/",
   },
   "github": {
