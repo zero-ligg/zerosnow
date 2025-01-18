@@ -277,7 +277,7 @@ function NewsListTimeLine({ items }: { items: NewsItem[] }) {
               "publisher": {
                 "@type": "Organization",
                 "name": item.source || "NewsNow",
-                "url": item.sourceUrl || "https://newsnow.majiajue.com",
+                "url": item.sourceUrl || "https://shishixinwen.news",
               },
             },
           })),
