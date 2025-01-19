@@ -290,6 +290,7 @@ export const originSources = {
     column: "tech",
     color: "slate",
     home: "https://linux.do/",
+    disable: "cf",
     sub: {
       latest: {
         title: "最新",
