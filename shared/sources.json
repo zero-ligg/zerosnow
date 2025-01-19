@@ -91,6 +91,7 @@
     "name": "36氪",
     "type": "realtime",
     "disable": "cf",
+    "column": "tech",
     "home": "https://36kr.com",
     "color": "blue",
     "interval": 600000,
@@ -100,6 +101,7 @@
     "name": "36氪",
     "type": "realtime",
     "disable": "cf",
+    "column": "tech",
     "home": "https://36kr.com",
     "color": "blue",
     "interval": 600000,
@@ -150,6 +152,7 @@
   "sputniknewscn": {
     "name": "卫星通讯社",
     "disable": "cf",
+    "column": "world",
     "home": "https://sputniknews.cn",
     "color": "orange",
     "interval": 600000
@@ -349,6 +352,7 @@
   "linuxdo": {
     "redirect": "linuxdo-latest",
     "name": "LINUX DO",
+    "disable": "cf",
     "column": "tech",
     "home": "https://linux.do/latest",
     "color": "slate",
@@ -357,6 +361,7 @@
   },
   "linuxdo-latest": {
     "name": "LINUX DO",
+    "disable": "cf",
     "column": "tech",
     "home": "https://linux.do/latest",
     "color": "slate",
@@ -366,6 +371,7 @@
   "linuxdo-hot": {
     "name": "LINUX DO",
     "type": "hottest",
+    "disable": "cf",
     "column": "tech",
     "home": "https://linux.do/hot",
     "color": "slate",
