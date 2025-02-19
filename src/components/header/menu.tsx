@@ -32,7 +32,7 @@ export function Menu() {
                 >
                 </button>
               )
-            : <button type="button" className="btn i-si:more-muted-horiz-circle-duotone" />
+            : <button disabled type="button" className="btn i-si:more-muted-horiz-circle-duotone" />
         }
       </span>
       {shown && (
