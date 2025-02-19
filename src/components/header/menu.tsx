@@ -16,7 +16,7 @@ export function Menu() {
   const { loggedIn, login, logout, userInfo, enableLogin } = useLogin()
   const [shown, show] = useState(false)
   return (
-    <span className="relative" onMouseEnter={() => show(true)} onMouseLeave={() => show(false)}>
+    <span disabled className="relative" onMouseEnter={() => show(true)} onMouseLeave={() => show(false)}>
       <span className="flex items-center scale-90">
         {
           enableLogin && loggedIn && userInfo.avatar
@@ -32,7 +32,7 @@ export function Menu() {
                 >
                 </button>
               )
-            : <button disabled type="button" className="btn i-si:more-muted-horiz-circle-duotone" />
+            : <button type="button" className="btn i-si:more-muted-horiz-circle-duotone" />
         }
       </span>
       {shown && (
